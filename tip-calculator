@@ -1,0 +1,25 @@
+
+# The tip calculator helps you calculate the total tip amount for a given bill as well as provides you with the bill 
+# and tip amount each person should be paying if you would like to split the bill. 
+
+print("Hello! Welcome to the Tip Calculator.")
+# Stores the value for the total bill amount that the user inputs
+bill = float(input("Please enter the total bill amount: $"))
+# Stores the value for the number of people that would split the bill
+num_people = int(input("Please enter the number of people who would like to split the bill: "))
+# Stores the value for the tip that you would like to pay
+tip_percent = int(input("What percentage tip would you like to give? 10?, 12?: "))
+tip_percent = tip_percent / 100
+tip_amount = bill * tip_percent
+total_bill = bill + tip_amount
+bill_per_person = total_bill / num_people
+# Outputs the bill for each person excluding the tip rounded to 2 decimal places
+print(f"Each person should pay ${bill_per_person:.2f}")
+# Outputs the tip for each person rounded to 2 decimal places
+print(f"The total tip amount is ${tip_amount:.2f}")
+# Outputs the bill including the tip rounded to 2 decimal places
+print(f"The total bill is ${total_bill:.2f}")
+# Outputs the tip amount for each person rounded to 2 decimal places
+print(f"Each person would be paying a tip of ${tip_amount / num_people:.2f}")
+# Outputs the bill for each person including the tip rounded to 2 decimal places
+print(f"Each person would be paying a total of ${total_bill / num_people:.2f}")
